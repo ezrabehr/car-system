@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
-import { MainPageComponent } from "./main-page/main-page.component";
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NavbarComponent } from "./navbar/navbar.component";
 
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
-    imports: [CommonModule, RouterOutlet, RegisterComponent, MainPageComponent,NgbModule,]
+    imports: [CommonModule, RouterOutlet, LoginComponent, RegisterComponent, NavbarComponent]
 })
 export class AppComponent {
   title = 'car-system';
