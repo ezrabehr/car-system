@@ -1,0 +1,3 @@
+*.db
+./front/node_modules
+

@@ -1,0 +1,37 @@
+services: 
+  db: 
+    image: postgres
+    restart: always
+    environment: 
+      POSTGRESS_PASSWORD: qwertyasdf
+      POSTGRES_USER: qwertyasdf
+      POSTGRES_DB: qwertyasdf
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - 5432:5432
+
+      
+
+  backend:
+    container_name: django
+    build: 
+      context: back
+    volumes: 
+      - ./back:/app
+    ports: 
+      - 8000:8000
+    command: tail -f /dev/null
+    
+  frontend: 
+      container_name: angular
+      build: 
+        context: front
+      volumes: 
+        - ./front:/app
+        - /app/node_modules
+      ports: 
+        - 4200:4200
+          #      command: tail -f /dev/null
+        
+
+    
