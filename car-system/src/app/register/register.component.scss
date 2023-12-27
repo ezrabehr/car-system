@@ -1,0 +1,21 @@
+.try{
+    height: 60px;
+    width: 100%;
+    background-color: rgb(255, 115, 0);
+    animation-duration: 1.5s;
+    animation-name: slidein;
+}
+.try:hover {
+    height: 200px;
+}
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%; 
+    }
+  }
